@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Electron Dialog Test</title></head>
+<body style="margin: 0; overflow: hidden;">
+	<canvas id="canvas" width="1000px" height="600px" style="margin: 0; border:0; padding: 0"></canvas>
+</body>
+<script>
+	document.getElementById("canvas").addEventListener("mousedown", (event) => {
+		let x = event.clientX;
+		let y = event.clientY;
+		document.getElementById("canvas").getContext("2d").fillRect(x - 10, y - 10, 20, 20);
+	});
+</script>
+</html>
