@@ -5,10 +5,18 @@
 	<canvas id="canvas" width="1000px" height="600px" style="margin: 0; border:0; padding: 0"></canvas>
 </body>
 <script>
-	document.getElementById("canvas").addEventListener("mousedown", (event) => {
+	let canvas = document.getElementById("canvas");
+	let ctx = canvas.getContext("2d");
+	ctx.font = "30px Arial";
+	canvas.addEventListener("mousedown", (event) => {
 		let x = event.clientX;
 		let y = event.clientY;
-		document.getElementById("canvas").getContext("2d").fillRect(x - 10, y - 10, 20, 20);
+		ctx.fillStyle = "white";
+		ctx.fillRect(0, 0, canvas.width, canvas.height);
+		ctx.fillStyle = "red";
+		ctx.fillRect(x - 10, y - 10, 20, 20);
+		ctx.fillStyle = "black";
+		ctx.fillText(`Clicked at ${x},${y}`, 10, 30);
 	});
 </script>
 </html>
