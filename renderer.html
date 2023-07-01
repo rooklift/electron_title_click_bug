@@ -19,9 +19,9 @@
 		ctx.fillRect(x - 10, y - 10, 20, 20);
 		ctx.fillStyle = "black";
 		if (was_bugged_click) {
-			ctx.fillText(`mousedown at ${x},${y} (bugged)`, 10, 30);
+			ctx.fillText(`${event.type} at ${x},${y} (bugged)`, 10, 30);
 		} else {
-			ctx.fillText(`mousedown at ${x},${y}`, 10, 30);
+			ctx.fillText(`${event.type} at ${x},${y}`, 10, 30);
 		}
 	});
 </script>
