@@ -9,7 +9,7 @@
 	let ctx = canvas.getContext("2d");
 	ctx.font = "30px Arial";
 	canvas.addEventListener("mousedown", (event) => {
-		let was_bugged_click = (event.button === 0 && event.buttons === 2);							// Seems to be a giveaway?
+		let was_bugged_click = (event.button === 0 && event.buttons !== 1);							// Seems to be a giveaway?
 		console.log(`which: ${event.which}, button: ${event.button}, buttons: ${event.buttons}`);
 		let x = event.clientX;
 		let y = event.clientY;
